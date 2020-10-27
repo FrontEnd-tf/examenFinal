@@ -2,16 +2,84 @@
 /* *** ESTILOS GENERALES *** */
 /* *********************************** */
 
-/* Tipografía */
-@font-face {
-    font-family: "";
-    src: url("") format("woof2"),
-         url("") format("woof");
+*{
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+  /* Colores */
+  --color-blanco: #fff;
+  --color-negro: #000;
+
+  --color-grisOscuro: #707070;
+  --color-grisClaro: #adadad;
+
+  --color-degrIzq: #fec35e;
+  --color-degrDer: #ffebc9;
+
+  --color-fondo: #bcb69c;
+  --color-fondoMain: #db7f1f;
+  --color-marron: #502b13;
+
+  --color-marco: #fec35e;
+}
+
+html {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: var(--color-fondo);
+  color: var(--color-blanco);
 }
 
 /* ******************************** */
-
-/* Colores */
-
+/* Maquetación / Estructura */
 /* ******************************** */
+.container {
+  height: 100vh;
+  display: grid;
+  /* grid-template-columns: 1fr 1366px 1fr; */
+  grid-template-columns: 1fr minmax(1100px, 1400px) 1fr;
+  grid-template-rows: 300px;
+}
+
+/* SEPARADOR */
+.main__separador {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  grid-template-rows: repeat(3, auto);
+  gap: 2rem;
+}
+/* Diferentes Separadores */
+.main__proyecto--gridTop {
+  grid-template-areas:
+    ""
+    ""
+    "";
+}
+.main__proyecto--gridBottom {
+  grid-template-areas:
+    ""
+    ""
+    "";
+}
+
+/* Marco */
+.marco,
+.marco__interior {
+  border-radius: 0px 92px 0px 89px;
+}
+.marco {
+  background-color: var(--color-marco);
+  width: 377px;
+  height: 357px;
+  
+  padding: 18px 0 0 28px;
+}
+.marco__interior {
+    border: 5px solid var(--color-marron);
+    background-color: #fff;
+    width: 339px;
+    height: 321px;
+}
 
